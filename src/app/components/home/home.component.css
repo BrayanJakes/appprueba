@@ -1,0 +1,18 @@
+.card{
+    background: #181a20;
+    color: white !important;
+    border: none;
+    font-weight: 600;
+  }
+
+
+
+.dsainda{
+    width: 30%; 
+    display: inline;
+}
+
+.dsaondoa{
+    max-height: 500px;
+    overflow-x: scroll;
+}

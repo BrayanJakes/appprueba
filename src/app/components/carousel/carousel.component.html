@@ -1,0 +1,146 @@
+<p>
+    <mat-toolbar>
+      <button mat-button class="dasfoas" *ngIf="layoutServices.responsiveStatus >= 2 && !logeado">
+        <mat-icon aria-hidden="false"  fontIcon="home"></mat-icon>
+        Market App</button>
+
+      <span class="dasfoas" *ngIf="layoutServices.responsiveStatus >= 2 && logeado">
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon aria-hidden="false"  fontIcon="density_medium"></mat-icon>Market App
+        </button>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="salir()">
+            <mat-icon aria-hidden="false"  fontIcon="power_settings_new"></mat-icon>
+             Salir</button>
+        </mat-menu>
+    </span>
+
+
+        <span class="dasfoas" *ngIf="layoutServices.responsiveStatus < 2 && logeado">
+            <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon aria-hidden="false"  fontIcon="density_medium"></mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item disabled>Market App</button>
+            <button mat-menu-item (click)="salir()">
+                <mat-icon aria-hidden="false"  fontIcon="power_settings_new"></mat-icon>
+                 Salir</button>
+            </mat-menu>
+        </span>
+
+      <ngb-carousel  *ngIf="layoutServices.responsiveStatus >= 2"
+      [interval]="10000"
+      [showNavigationArrows]="false"
+	  [showNavigationIndicators]="false"
+      >
+        <ng-template ngbSlide>
+            <div class="carousel-caption">
+
+                <h3>
+                    
+                    <span><img src="./assets/btc.png" class="dasofa" alt=""> BTC/USDT: {{btcPrice}}$</span>  
+                    <span><img src="./assets/eth.png" class="dasofa" alt=""> ETH/USDT: {{ethPrice}}$</span>  
+                
+                </h3> 
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="carousel-caption">
+                <h3>
+                    
+                    <span><img src="./assets/bnb.png" class="dasofa" alt=""> BNB/USDT: {{bnbPrice}}$</span>  
+                    <span><img src="./assets/usdt.png" class="dasofa" alt=""> USDT: {{usdtPrice}}$</span>  
+                
+                </h3> 
+            </div>
+        </ng-template>
+
+        <ng-template ngbSlide>
+            <div class="carousel-caption">
+                <h3>
+                    
+                    <span><img src="./assets/ves.png" class="dasofa" alt=""> BS: {{bsPrice}}$</span> 
+                    <span><img src="./assets/petro.webp" class="dasofa" alt=""> PTR: {{ptrPrice}}BS</span> 
+                </h3> 
+            </div>
+        </ng-template>
+    </ngb-carousel>
+
+
+    <ngb-carousel  *ngIf="layoutServices.responsiveStatus < 2"
+        [interval]="10000"
+        [showNavigationArrows]="false"
+        [showNavigationIndicators]="false"
+        >
+          <ng-template ngbSlide>
+              <div class="carousel-caption">
+  
+                  <h3>
+                      
+                      <span><img src="./assets/btc.png" class="dasofa" alt=""> BTC/USDT: {{btcPrice}}$</span>  
+
+                  </h3> 
+              </div>
+          </ng-template>
+
+          <ng-template ngbSlide>
+            <div class="carousel-caption">
+
+                <h3>
+                    
+                    <span><img src="./assets/eth.png" class="dasofa" alt=""> ETH/USDT: {{ethPrice}}$</span>  
+                  
+                </h3> 
+            </div>
+        </ng-template>
+
+
+         
+          <ng-template ngbSlide>
+              <div class="carousel-caption">
+                  <h3>
+                      
+                      <span><img src="./assets/bnb.png" class="dasofa" alt=""> BNB/USDT: {{bnbPrice}}$</span>  
+                      
+                  
+                  </h3> 
+              </div>
+          </ng-template>
+
+          <ng-template ngbSlide>
+            <div class="carousel-caption">
+                <h3>
+                    
+                    <span><img src="./assets/usdt.png" class="dasofa" alt=""> USDT: {{usdtPrice}}$</span>    
+                    
+                
+                </h3> 
+            </div>
+        </ng-template>
+
+         
+  
+          <ng-template ngbSlide>
+              <div class="carousel-caption">
+                  <h3>
+                      
+                      <span><img src="./assets/ves.png" class="dasofa" alt=""> BS: {{bsPrice}}$</span> 
+                      
+                  </h3> 
+              </div>
+          </ng-template>
+
+          <ng-template ngbSlide>
+            <div class="carousel-caption">
+                <h3>
+                    
+                    <span><img src="./assets/petro.webp" class="dasofa" alt=""> PTR: {{ptrPrice}}BS</span> 
+                    
+                </h3> 
+            </div>
+        </ng-template>
+
+          
+      </ngb-carousel>
+    </mat-toolbar>
+  </p>

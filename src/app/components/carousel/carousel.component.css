@@ -1,0 +1,33 @@
+mat-toolbar{
+    background-color: #181a20;
+    color: white;
+}
+
+
+ngb-carousel{
+    width: 100%;
+}
+
+.carousel-caption{
+    position: sticky;
+}
+
+.dasofa{
+    width: 25px;
+    height: 25px;
+}
+
+span{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.dasfoas{
+    position: absolute; 
+    z-index: 99;    
+     left: 0px;
+        top: 5px;
+    cursor: pointer;
+}

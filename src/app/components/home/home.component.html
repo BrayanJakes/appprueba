@@ -1,0 +1,48 @@
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-6">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h3 class="card-title">Bienvenido Admin</h3>
+                  <h6 class="card-subtitle mb-2">Fondos en cuenta:</h6>
+                  <p class="card-text">2.000USDT / 0.000024BTC</p>
+         
+                </div>
+              </div>
+        </div>
+    </div>
+
+    
+    <div class="form-group pull-right mt-3" style="text-align: right;">
+        <input type="text" 
+        #busqueda
+        (change)="filter = busqueda.value"
+        class="search form-control dsainda" placeholder="Buscar moneda">
+    </div>
+    
+
+    <br>
+   <div class="dsaondoa">
+    <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Simbolo</th>
+            <th scope="col" style="text-align: right;">Ultimo precio</th>
+            <th scope="col" style="text-align: right;">Precio bajo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of datas | filter: filter; let i = index">
+            <td>{{ i + 1 }}</td>
+            <th>{{data.symbol}}</th>
+            <td style="text-align: right;">{{data.lastPrice}}$</td>
+            <td style="text-align: right;">{{data.lowPrice}}$</td>
+            
+          </tr>
+        </tbody>
+      </table>
+   </div>
+</div>
